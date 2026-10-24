@@ -9,9 +9,8 @@ namespace BeatBox.Models
         public required string Title { get; set; } 
         public required string Artist { get; set; } 
         public int? DurationSeconds { get; set; }
-
         public int? PlaylistId { get; set; }
 
-        public playlist Playlist { get; set; }
+        public required Playlist Playlist { get; set; }
     }
 }

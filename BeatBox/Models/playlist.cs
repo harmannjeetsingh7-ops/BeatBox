@@ -2,7 +2,7 @@
 
 namespace BeatBox.Models
 {
-    public class playlist
+    public class Playlist
     {
         public int PlaylistId { get; set; }
         [Required]
@@ -13,7 +13,7 @@ namespace BeatBox.Models
 
         public DateTime? CreatedDate { get; set; } 
 
-        public ICollection<Song> Songs { get; set; } = new List<Song>();
+        public ICollection<Song> Songs { get; set; } = [];
     }
 }
  
