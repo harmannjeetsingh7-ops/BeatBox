@@ -1,0 +1,54 @@
+@model IEnumerable<BeatBox.Models.Song>
+
+@{
+    ViewData["Title"] = "Songs";
+}
+
+<h1>My Songs</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        Add New Song
+    </a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Duration (Seconds)</th>
+            <th>Playlist</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Artist</td>
+                <td>@item.DurationSeconds</td>
+                <td>@(item.Playlist?.Name ?? "No Playlist")</td>
+
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-id="@item.SongId">
+                        Edit
+                    </a> |
+
+                    <a asp-action="Details"
+                       asp-route-id="@item.SongId">
+                        Details
+                    </a> |
+
+                    <a asp-action="Delete"
+                       asp-route-id="@item.SongId">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

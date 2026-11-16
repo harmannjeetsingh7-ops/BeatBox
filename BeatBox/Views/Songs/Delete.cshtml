@@ -1,0 +1,35 @@
+@model BeatBox.Models.Song
+
+@{
+    ViewData["Title"] = "Delete Song";
+}
+
+<h1>Delete Song</h1>
+
+<h4>Are you sure you want to delete this song?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Title</dt>
+    <dd class="col-sm-9">@Model.Title</dd>
+
+    <dt class="col-sm-3">Artist</dt>
+    <dd class="col-sm-9">@Model.Artist</dd>
+
+    <dt class="col-sm-3">Duration (Seconds)</dt>
+    <dd class="col-sm-9">@Model.DurationSeconds</dd>
+
+    <dt class="col-sm-3">Playlist</dt>
+    <dd class="col-sm-9">@Model.Playlist?.Name</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="SongId" />
+
+    <input type="submit"
+           value="Delete"
+           class="btn btn-danger" />
+
+    <a asp-action="Index"
+       class="btn btn-secondary">Cancel</a>
+</form>

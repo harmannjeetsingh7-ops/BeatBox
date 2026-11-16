@@ -1,0 +1,32 @@
+@model BeatBox.Models.Song
+
+@{
+    ViewData["Title"] = "Song Details";
+}
+
+<h1>Song Details</h1>
+<h4>BeatBox Music Library</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Title</dt>
+    <dd class="col-sm-9">@Model.Title</dd>
+
+    <dt class="col-sm-3">Artist</dt>
+    <dd class="col-sm-9">@Model.Artist</dd>
+
+    <dt class="col-sm-3">Duration (Seconds)</dt>
+    <dd class="col-sm-9">@Model.DurationSeconds</dd>
+
+    <dt class="col-sm-3">Playlist</dt>
+    <dd class="col-sm-9">@Model.Playlist?.Name</dd>
+</dl>
+
+<div>
+    <a asp-action="Edit"
+       asp-route-id="@Model.SongId"
+       class="btn btn-primary">Edit</a>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">Back to List</a>
+</div>
