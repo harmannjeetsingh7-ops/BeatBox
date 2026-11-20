@@ -9,37 +9,30 @@ This project was developed for COMP 2084 Assignment 2
 at Georgian College.
 
 ## Features
-- Create, view, edit, and delete playlists
-- Create, view, edit, and delete songs
-- Assign songs to playlists using a dropdown
-- Store information in a SQL Server database
-- One-to-many relationship between playlists and songs
-- ASP.NET Core MVC with Razor Views
+1. Create, view, edit, and delete playlists
+2. Create, view, edit, and delete songs
+3. Assign songs to playlists using a dropdown
+4. Store information in a SQL Server database
+5. One-to-many relationship between playlists and songs
+6. ASP.NET Core MVC with Razor Views
 
 ## Technologies Used
-- C#
-- ASP.NET Core MVC
-- Entity Framework Core
-- Microsoft SQL Server
-- HTML
-- Bootstrap
-- GitHub
+1. C#
+2. ASP.NET Core MVC
+3. Entity Framework Core
+4. Microsoft SQL Server
+5. HTML
+6. Bootstrap
+7. GitHub
 
 ## Database
 The application uses a SQL Server database named beatBox.
 
 Tables:
-- Playlists
-- Songs
+Playlists
+Songs
 
 One playlist can contain multiple songs.
-
-## How to Run
-1. Open the project in Visual Studio.
-2. Configure DefaultConnection in appsettings.json.
-3. Make sure SQL Server is running.
-4. Run Update-Database if the database has not been created.
-5. Run the application using HTTPS.
 
 ## Author
 Harmanjeet Singh
